@@ -4,9 +4,10 @@ import { AppService } from "./app.service";
 import { TypeOrmModule } from "@nestjs/typeorm";
 import { UserModule } from "./modules/user.module";
 import { HttpModule } from "@nestjs/axios";
+import { TransferModule } from "./modules/transfer.module";
 
 @Module({
-  imports: [UserModule, HttpModule, TypeOrmModule.forRoot({
+  imports: [UserModule, TransferModule, HttpModule, TypeOrmModule.forRoot({
     "type": "postgres",
     "host": "lucky.db.elephantsql.com",
     "username": "tlguqhlo",
@@ -16,7 +17,7 @@ import { HttpModule } from "@nestjs/axios";
       "src/entities/**/*.ts"
     ],
     "ssl": false,
-    synchronize: true,
+    synchronize: true
   })],
   controllers: [AppController],
   providers: [AppService]
