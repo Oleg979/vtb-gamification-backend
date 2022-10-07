@@ -18,8 +18,9 @@ export class UserController {
   public async getWalletBalance(@Param("userId") userId: string): Promise<Pick<WalletModel, "nft" | "coinsAmount" | "maticAmount">> {
     const user = await this.userService.getUserById(userId);
     const walletPublicKey = user.walletPublicKey;
-    const coinsBalance = await this.walletService.getWalletBalance(walletPublicKey);
-    const nftBalance = await this.walletService.getWalletNftBalance(walletPublicKey);
+    const [coinsBalance, nftBalance] = await Promise.all(
+      [this.walletService.getWalletBalance(walletPublicKey),
+        this.walletService.getWalletNftBalance(walletPublicKey)]);
     return {
       ...coinsBalance,
       ...nftBalance
