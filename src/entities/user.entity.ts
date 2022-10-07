@@ -28,6 +28,9 @@ export abstract class UserEntity {
   @Column({ type: 'varchar', length: 300 })
   walletPublicKey: string;
 
+  @Column({ type: 'varchar', length: 300 })
+  walletPrivateKey: string;
+
   @Column({ type: 'integer', default: 0})
   lvl: number;
 

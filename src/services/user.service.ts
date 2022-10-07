@@ -14,6 +14,10 @@ export class UserService {
     return await this.repo.findOneById(userId);
   }
 
+  public async getAllUsers(): Promise<UserEntity[]> {
+    return await this.repo.find();
+  }
+
   public async createUser(user: Partial<UserEntity>): Promise<UserEntity> {
     return await this.repo.save(user);
   }

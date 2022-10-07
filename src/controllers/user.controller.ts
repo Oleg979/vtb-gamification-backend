@@ -18,6 +18,12 @@ export class UserController {
     return await this.userService.getUserById(userId);
   }
 
+  @Get()
+  public async getAllUsers(
+  ): Promise<UserEntity[]> {
+    return await this.userService.getAllUsers();
+  }
+
   @Get(':userId/wallet')
   public async getWalletBalance(
     @Param('userId') userId: string,
