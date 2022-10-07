@@ -1,0 +1,1 @@
+export const BLOCKCHAIN_API_BASE_URL = 'https://hackathon.lsp.team/hk'

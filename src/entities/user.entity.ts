@@ -1,12 +1,13 @@
-import { PrimaryGeneratedColumn, Column } from 'typeorm';
+import { PrimaryGeneratedColumn, Column, Entity } from "typeorm";
 
 export enum USER_ROLES {
   USER,
   ADMIN
 }
 
+@Entity()
 export abstract class UserEntity {
-  @PrimaryGeneratedColumn('uuid')
+  @PrimaryGeneratedColumn('increment')
   id: string;
 
   @Column({ type: 'varchar', length: 300 })
@@ -18,15 +19,18 @@ export abstract class UserEntity {
   @Column({ type: 'varchar', length: 300 })
   password: string;
 
-  @Column({ type: 'number', length: 300 })
+  @Column({ type: 'varchar', length: 300 })
+  avatar: string;
+
+  @Column({ type: 'integer'})
   role: USER_ROLES;
 
   @Column({ type: 'varchar', length: 300 })
   walletPublicKey: string;
 
-  @Column({ type: 'number', default: 0})
+  @Column({ type: 'integer', default: 0})
   lvl: number;
 
-  @Column({ type: 'number', default: 0})
+  @Column({ type: 'integer', default: 0})
   pointsOnCurrentLevel: number;
 }

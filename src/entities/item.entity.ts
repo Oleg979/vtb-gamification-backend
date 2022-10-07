@@ -1,5 +1,6 @@
-import { PrimaryGeneratedColumn, Column } from 'typeorm';
+import { PrimaryGeneratedColumn, Column, Entity } from "typeorm";
 
+@Entity()
 export abstract class ItemEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;
@@ -13,7 +14,7 @@ export abstract class ItemEntity {
   @Column({ type: 'varchar', length: 300 })
   image: string;
 
-  @Column({ type: 'number', default: 100 })
+  @Column({ type: 'integer', default: 100 })
   pointsPrice: number;
 
   // nftPrice?

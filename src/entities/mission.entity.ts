@@ -1,5 +1,6 @@
-import { PrimaryGeneratedColumn, Column } from 'typeorm';
+import { PrimaryGeneratedColumn, Column, Entity } from "typeorm";
 
+@Entity()
 export abstract class MissionEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;
@@ -10,10 +11,10 @@ export abstract class MissionEntity {
   @Column({ type: 'varchar', length: 300 })
   description: string;
 
-  @Column({ type: 'number', default: 100 })
+  @Column({ type: 'integer', default: 100 })
   pointsReward: number;
 
-  @Column({ type: 'number', default: 100})
+  @Column({ type: 'integer', default: 100})
   drReward: number;
 
   // nftReward?
