@@ -1,14 +1,15 @@
 import { TransferController } from "../controllers/Transfer.controller";
-import { TransferService } from "../services/Transfer.service";
 import { Module } from "@nestjs/common";
-import { WalletService } from "../services/wallet.service";
 import { HttpModule } from "@nestjs/axios";
+import { UserService } from "../services/user.service";
+import { TypeOrmModule } from "@nestjs/typeorm";
+import { UserEntity } from "../entities/user.entity";
+import { TransferService } from "../services/transfer.service";
 
 @Module({
-  imports: [HttpModule],
-  providers: [TransferService, WalletService],
+  imports: [HttpModule, TypeOrmModule.forFeature([UserEntity])],
   controllers: [TransferController],
-  exports: []
+  providers: [UserService, TransferService]
 })
 export class TransferModule {
 }

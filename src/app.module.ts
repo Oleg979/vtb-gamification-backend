@@ -5,6 +5,10 @@ import { TypeOrmModule } from "@nestjs/typeorm";
 import { UserModule } from "./modules/user.module";
 import { HttpModule } from "@nestjs/axios";
 import { TransferModule } from "./modules/transfer.module";
+import { TransferService } from "./services/transfer.service";
+import { UserService } from "./services/user.service";
+import { WalletService } from "./services/wallet.service";
+import { UserEntity } from "./entities/user.entity";
 
 @Module({
   imports: [UserModule, TransferModule, HttpModule, TypeOrmModule.forRoot({
@@ -18,9 +22,9 @@ import { TransferModule } from "./modules/transfer.module";
     ],
     "ssl": false,
     synchronize: true
-  })],
+  }), TypeOrmModule.forFeature([UserEntity])],
   controllers: [AppController],
-  providers: [AppService]
+  providers: [AppService, TransferService, UserService, WalletService]
 })
 export class AppModule {
 }

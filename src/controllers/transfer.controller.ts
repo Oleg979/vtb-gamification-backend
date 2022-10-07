@@ -1,13 +1,11 @@
 import { Body, Controller, Get, Param, Post } from "@nestjs/common";
 import { UserService } from "../services/user.service";
-import { WalletService } from "../services/wallet.service";
 import { TransferService } from "../services/transfer.service";
 
 @Controller("transfer")
 export class TransferController {
   constructor(
     private userService: UserService,
-    private walletService: WalletService,
     private transferService: TransferService
   ) {
   }
