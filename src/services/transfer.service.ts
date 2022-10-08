@@ -15,7 +15,12 @@ export class TransferService {
   }
 
   public async transferDigitalRubles(fromPrivateKey: string, toPublicKey: string, amount: number): Promise<{ transactionHash: string }> {
-    return await this.httpService.axiosRef.get(`${BLOCKCHAIN_API_BASE_URL}/v1/transfers/ruble`).then(res => res.data);
+    console.log(fromPrivateKey, toPublicKey, amount)
+    return this.httpService.axiosRef.post(`${BLOCKCHAIN_API_BASE_URL}/v1/transfers/ruble`, {
+      fromPrivateKey: fromPrivateKey.trim(),
+      toPublicKey,
+      amount
+    }).then(res => res.data);
   }
   public async transferNft(fromPrivateKey: string, toPublicKey: string, tokenId: number): Promise<{ transactionHash: string }> {
     return await this.httpService.axiosRef.get(`${BLOCKCHAIN_API_BASE_URL}/v1/transfers/nft`).then(res => res.data);

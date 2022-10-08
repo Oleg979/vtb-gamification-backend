@@ -9,9 +9,10 @@ import { TransferService } from "./services/transfer.service";
 import { UserService } from "./services/user.service";
 import { WalletService } from "./services/wallet.service";
 import { UserEntity } from "./entities/user.entity";
+import { NftModule } from "./modules/nft.module";
 
 @Module({
-  imports: [UserModule, TransferModule, HttpModule, TypeOrmModule.forRoot({
+  imports: [UserModule, TransferModule, NftModule, HttpModule, TypeOrmModule.forRoot({
     "type": "postgres",
     "host": "lucky.db.elephantsql.com",
     "username": "tlguqhlo",

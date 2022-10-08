@@ -17,14 +17,14 @@ export class TransferController {
     return await this.transferService.getTransactionStatus(transactionHash);
   }
 
-  @Post("ruble/from/:fromId/to/:toId")
+  @Get("ruble/from/:fromId/to/:toId/:amount")
   public async transferRuble(
     @Param("fromId") fromId: string,
     @Param("toId") toId: string,
-    @Body() amount: number
+    @Param("amount") amount: number,
   ): Promise<{ transactionHash: string }> {
     const [fromUser, toUser] = await Promise.all([this.userService.getUserById(fromId), this.userService.getUserById(toId)]);
-    const fromPrivateKey = fromUser.walletPublicKey;
+    const fromPrivateKey = fromUser.walletPrivateKey;
     const toPublicKey = toUser.walletPublicKey;
     return this.transferService.transferDigitalRubles(fromPrivateKey, toPublicKey, amount);
   }
