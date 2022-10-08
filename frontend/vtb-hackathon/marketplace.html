@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ВТБ-маркетплейс</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <!--<svg role="img" width="98" height="35">
+          <path fill="#00aaff" d="M6.665-0.002l-1.669 4.579h23.127l1.669-4.579h-23.127zM4.162 6.865l-1.669 4.578h23.127l1.669-4.578h-23.127zM1.663 13.732l-1.669 4.578h23.127l1.668-4.578h-23.126z"></path>
+          <path fill="#0a2896" d="M49.16 20.055v0.097c1.057 0.388 2.067 1.068 2.596 1.504 1.634 1.359 2.356 3.154 2.356 5.483 0 3.835-2.019 6.6-5.336 7.474-1.010 0.291-2.067 0.388-4.038 0.388h-10.045v-28.048h8.893c1.827 0 3.076 0.097 4.181 0.387 3.221 0.874 5.336 3.106 5.336 6.648 0 1.893-0.673 3.495-1.778 4.562-0.481 0.485-1.154 1.068-2.163 1.504zM40.268 23.015v7.376h3.846c1.153 0 2.211-0.097 2.98-0.825s1.105-1.65 1.105-2.863c0-0.921-0.241-1.795-0.721-2.426-0.817-1.019-1.827-1.262-3.557-1.262h-3.654zM40.219 18.162h3.125c0.961 0 1.442 0 1.922-0.145 1.299-0.389 2.116-1.552 2.116-3.154 0-1.892-0.865-2.718-2.116-3.105-0.529-0.146-1.057-0.194-2.115-0.194h-2.932v6.599zM62.475 35.002v-23.342h-8.027v-4.706h22.305l-1.586 4.706h-7.115v23.342h-5.576zM78.483 35.002v-28.048h18.075l-1.586 4.706h-10.96v6.212h4.471c3.605 0 5.48 0.874 6.778 1.989 1.010 0.874 2.74 2.814 2.74 6.649 0 3.785-1.778 5.871-3.269 6.939-1.73 1.212-3.557 1.553-7.259 1.553h-8.989zM84.011 30.294h4.182c1.586 0 2.547-0.388 3.22-1.262 0.336-0.436 0.817-1.214 0.817-2.669s-0.481-2.475-1.442-3.203c-0.576-0.436-1.346-0.678-2.644-0.678h-4.134v7.812z"></path>
+      </svg>-->
+      <img src="assets/img/2560px-VTB_Logo_2018.svg.png" alt="vtb-logo" height="55px">
+      <span> - exchange</span>
+    </div>
+    <div class="header-right">
+      <p>Иванов Иван Иванович</p>
+      <a href="personal-client.html"><img src="assets/img/avatar.png" alt="avatar" class="header-avatar" height="55px"></a>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 24" class="iconSvg" height="20" width="20"
+           focusable="false" style="
+      width: 48px;
+      height: 48px;
+      fill: rgb(98, 111, 132);
+      transition: fill 0.3s ease 0s;
+      cursor: pointer;
+      margin-left: 15px;
+  ">
+        <path fill-rule="evenodd"
+              d="M2.59 18.799h16.297a2.257 2.257 0 0 0 1.596-3.853l-.682-.682A7.332 7.332 0 0 1 17.71 9.99l-.539-4.312a6.482 6.482 0 0 0-12.865 0L3.767 9.99a7.331 7.331 0 0 1-2.09 4.274l-.682.682A2.256 2.256 0 0 0 2.59 18.8Zm11.112 3.062c.174-.524-.29-.983-.842-.983H8.617c-.552 0-1.015.459-.842.983a3.123 3.123 0 0 0 5.927 0Z"
+              clip-rule="evenodd"></path>
+      </svg>
+    </div>
+  </header>
+
+  <main class="store-main">
+    <div class="store-header">
+      <h1>Маркетплейс</h1>
+      <div class="wallet">
+        <span>Мои средства: </span>
+        <span id="balance">10900</span>
+        <span>DR</span>
+      </div>
+    </div>
+
+    <div class="store-container">
+      <div class="item">
+          <img src="assets/img/nok600.jpg">
+          <span><pre>9000 DR</pre></span>
+          <button id="del" class="change">Обменять</button>
+      </div>
+      <div class="item">
+        <img src="assets/img/VTB-9.jfif">
+        <span><pre>1000 DR</pre></span>
+        <button class="change">Обменять</button>
+      </div>
+      <div class="item">
+        <img src="assets/img/мурашева6.jpg">
+        <span><pre>1000 DR</pre></span>
+        <button class="change">Обменять</button>
+      </div>
+      <div class="item">
+        <img src="assets/img/VTB-1.jfif">
+        <span><pre>1000 DR</pre></span>
+        <button class="change">Обменять</button>
+      </div>
+      <div class="item">
+        <img src="assets/img/VTB-3.jfif">
+        <span><pre>1000 DR</pre></span>
+        <button class="change">Обменять</button>
+      </div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </div>
+  </main>
+  <script>
+    document.getElementById("del").addEventListener("click", () => {
+      document.getElementById("del").style.background = "grey";
+    })
+    const urlParams = new URLSearchParams(window.location.search);
+    const mode = urlParams.get('mode');
+    if(mode) {
+      document.getElementById('balance').innerHTML = '1000';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ВТБ exchange</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+<header>
+    <div class="header-left">
+        <!--<svg role="img" width="98" height="35">
+            <path fill="#00aaff" d="M6.665-0.002l-1.669 4.579h23.127l1.669-4.579h-23.127zM4.162 6.865l-1.669 4.578h23.127l1.669-4.578h-23.127zM1.663 13.732l-1.669 4.578h23.127l1.668-4.578h-23.126z"></path>
+            <path fill="#0a2896" d="M49.16 20.055v0.097c1.057 0.388 2.067 1.068 2.596 1.504 1.634 1.359 2.356 3.154 2.356 5.483 0 3.835-2.019 6.6-5.336 7.474-1.010 0.291-2.067 0.388-4.038 0.388h-10.045v-28.048h8.893c1.827 0 3.076 0.097 4.181 0.387 3.221 0.874 5.336 3.106 5.336 6.648 0 1.893-0.673 3.495-1.778 4.562-0.481 0.485-1.154 1.068-2.163 1.504zM40.268 23.015v7.376h3.846c1.153 0 2.211-0.097 2.98-0.825s1.105-1.65 1.105-2.863c0-0.921-0.241-1.795-0.721-2.426-0.817-1.019-1.827-1.262-3.557-1.262h-3.654zM40.219 18.162h3.125c0.961 0 1.442 0 1.922-0.145 1.299-0.389 2.116-1.552 2.116-3.154 0-1.892-0.865-2.718-2.116-3.105-0.529-0.146-1.057-0.194-2.115-0.194h-2.932v6.599zM62.475 35.002v-23.342h-8.027v-4.706h22.305l-1.586 4.706h-7.115v23.342h-5.576zM78.483 35.002v-28.048h18.075l-1.586 4.706h-10.96v6.212h4.471c3.605 0 5.48 0.874 6.778 1.989 1.010 0.874 2.74 2.814 2.74 6.649 0 3.785-1.778 5.871-3.269 6.939-1.73 1.212-3.557 1.553-7.259 1.553h-8.989zM84.011 30.294h4.182c1.586 0 2.547-0.388 3.22-1.262 0.336-0.436 0.817-1.214 0.817-2.669s-0.481-2.475-1.442-3.203c-0.576-0.436-1.346-0.678-2.644-0.678h-4.134v7.812z"></path>
+        </svg>-->
+        <img src="assets/img/2560px-VTB_Logo_2018.svg.png" alt="vtb-logo" height="55px">
+        <span> - gamification</span>
+    </div>
+    <div class="header-right">
+        <p id="name">Иванов Иван Иванович</p>
+        <img id="avatar" src="assets/img/avatar.png" alt="avatar" class="header-avatar" height="55px">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 24" class="iconSvg" height="24" width="24"
+             focusable="false" style="
+    width: 48px;
+    height: 48px;
+    fill: rgb(98, 111, 132);
+    transition: fill 0.3s ease 0s;
+    cursor: pointer;
+    margin-left: 15px;
+">
+            <path fill-rule="evenodd"
+                  d="M2.59 18.799h16.297a2.257 2.257 0 0 0 1.596-3.853l-.682-.682A7.332 7.332 0 0 1 17.71 9.99l-.539-4.312a6.482 6.482 0 0 0-12.865 0L3.767 9.99a7.331 7.331 0 0 1-2.09 4.274l-.682.682A2.256 2.256 0 0 0 2.59 18.8Zm11.112 3.062c.174-.524-.29-.983-.842-.983H8.617c-.552 0-1.015.459-.842.983a3.123 3.123 0 0 0 5.927 0Z"
+                  clip-rule="evenodd"></path>
+        </svg>
+    </div>
+</header>
+<main class="user-main">
+    <div class="person-info">
+        <img id="avatar2" src="assets/img/avatar.png" alt="avatar" height="200px">
+        <div class="person-data">
+            <p id="name2" class="name">Иванов Иван Иванович</p>
+            <p class="position">Разработчик интерфейсов</p>
+            <p class="position">Команда ВТБ Ипотека</p>
+        </div>
+    </div>
+    <div class="person-main-info">
+
+        <div class="tabs">
+
+            <input type="radio" id="tab1" name="tab-control" checked>
+            <input type="radio" id="tab2" name="tab-control">
+            <input type="radio" id="tab3" name="tab-control">
+            <input type="radio" id="tab4" name="tab-control">
+            <ul>
+                <li title="Features"><label for="tab1" role="button"><br><span>Основное</span></label></li>
+                <li title="Delivery Contents"><label for="tab2" role="button"><br><span>Достижения</span></label></li>
+                <li title="Shipping"><label for="tab3" role="button"><br><span>Мои NFT</span></label></li>
+                <li title="Returns"><label for="tab4" role="button"><br><span>История операций</span></label></li>
+            </ul>
+
+            <div class="slider">
+                <div class="indicator"></div>
+            </div>
+            <div class="content">
+                <section>
+                    <h2>Features</h2>
+                    <p class="lvl-header">Мой прогресс</p>
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div id="bar" class="js-completed-bar completed-bar" data-complete="60">
+                            </div>
+                        </div>
+                        <div class="progress-information">
+                            <p id="lvl" class="text-colour--faded-60">Уровень 10</p>
+                            <p id="pointsToNext" class="text-colour--primary-red--80">60%</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex;gap: 71px;">
+                        <div style="min-width: 300px;">
+                            <p class="lvl-header">Кошелек</p>
+
+                            <div class="DR-sum">
+                                <span><pre>Баланс :   </pre></span>
+
+                                <span><pre id="balanceCoins">45854  </pre></span>
+                                <span>DR</span>
+                            </div>
+                            <div class="main-btns">
+                                <button class="thanks-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    Поблагодарить
+                                </button>
+                                <a id="link" href="marketplace.html?mode=1">
+                                    <button class="thanks-btn">Потратить</button>
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <p class="goals-header">Мои цели</p>
+                                <div id="goal" class="next-goal">
+                                    <img src="assets/img/goal.png" alt="goal">
+                                    <div>
+                                        <p class="p-goal1">Твоя следующая цель: Выпустить проект в прод</p>
+                                        <p class="p-goal2">Награда: NFT "Chilling Capybara"</p>
+                                    </div>
+                                </div>
+                                <div id="no-goal">Вы выполнили все цели. Хорошая работа!</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <p class="achievement-header">Мои достижения</p>
+                    <div id="achievements" class="achievement-container">
+                        <div class="achievement">
+                            <img src="assets/img/medal.png">
+                            <p>Провёл 1 митап</p>
+                        </div>
+                        <div class="achievement">
+                            <img src="assets/img/trophy.png">
+                            <p>Закрыл спринт</p>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section>
+                    <div id="nfts" class="nfts">
+                    </div>
+                </section>
+
+                <section>
+                    <div class="transactions">
+                        <div class="transaction">
+                            <div class="transaction_left">
+                                <div>Сегодня 10:00</div>
+                                <div class="transaction_icon">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg" class="iconSvg" focusable="false">
+                                        <circle cx="20" cy="20" r="18" fill="#6B7683"></circle>
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M15.0909 11C12.2793 11 10 13.5072 10 16.6V23.4C10 26.4928 12.2793 29 15.0909 29H24.9091C27.7207 29 30 26.4928 30 23.4V16.6C30 13.5072 27.7207 11 24.9091 11H15.0909ZM20.4195 16.4648C20.7745 16.0743 21.3501 16.0743 21.7051 16.4648L24.2764 19.2932C24.6314 19.6838 24.6314 20.3169 24.2764 20.7075L21.7051 23.5359C21.3501 23.9264 20.7745 23.9264 20.4195 23.5359C20.0644 23.1454 20.0644 22.5122 20.4195 22.1217L21.4393 20.9998H16.3637C15.8616 20.9998 15.4546 20.5521 15.4546 19.9998C15.4546 19.4476 15.8616 18.9998 16.3637 18.9998H21.4384L20.4195 17.879C20.0644 17.4885 20.0644 16.8553 20.4195 16.4648Z"
+                                              fill="white"></path>
+                                    </svg>
+                                </div>
+                                <div class="transaction_from">Иван Иванов</div>
+                                <div class="transaction_msg">☕ Как и обещал, на кофе</div>
+                            </div>
+                            <div class="transaction_amount minus">-1000 DR</div>
+                        </div>
+                        <div class="transaction">
+                            <div class="transaction_left">
+                                <div>Сегодня 10:00</div>
+                                <div class="transaction_icon">
+                                    <img src="https://headless-cms.vtb.ru/projects/pfm/files/otherincome_pic.png"/>
+                                </div>
+                                <div class="transaction_from">Анна Титкова</div>
+                                <div class="transaction_msg">На ведро KFC</div>
+                            </div>
+                            <div class="transaction_amount">+1000 DR</div>
+                        </div>
+                        <div class="transaction">
+                            <div class="transaction_left">
+                                <div>Сегодня 10:00</div>
+                                <div class="transaction_icon">
+                                    <img src="https://headless-cms.vtb.ru/projects/pfm/files/otherincome_pic.png"/>
+                                </div>
+                                <div class="transaction_from">Дмитрий Дмитриев</div>
+                                <div class="transaction_msg">Спасибо за помощь с задачей!! 😊</div>
+                            </div>
+                            <div class="transaction_amount">+1000 DR</div>
+                        </div>
+                        <div class="transaction">
+                            <div class="transaction_left">
+                                <div>Сегодня 10:00</div>
+                                <div class="transaction_icon">
+                                    <img src="https://headless-cms.vtb.ru/projects/pfm/files/otherincome_pic.png"/>
+                                </div>
+                                <div class="transaction_from">Иван иванов</div>
+                                <div class="transaction_msg">За крутую лекцию. Узнал много нового</div>
+                            </div>
+                            <div class="transaction_amount">+1000 DR</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div>
+        </div>
+    </div>
+    <div id="notification" class="notification">
+        <div><img src="assets/img/female.png" style="border-radius: 50%" alt="avatar" height="50px"></div>
+        <div class="notification_data">
+            <div style="font-size: 17px;"><b>Мария Иванова</b> отправила Вам <span
+                    style="color: green; font-weight: bolder; font-size: 20px;">1000 DR</span></div>
+            <div class="transaction_msg">
+                За крутую лекцию. Узнала много нового!
+            </div>
+        </div>
+    </div>
+    <div id="notification4" class="notification">
+        <div><img src="assets/img/avatar.png" style="border-radius: 50%" alt="avatar" height="50px"></div>
+        <div class="notification_data">
+            <div style="font-size: 17px;">Вы отправили <b>Ивану Иванову</b> <span
+                    style="color: green; font-weight: bolder; font-size: 20px;">1000 DR</span></div>
+            <div class="transaction_msg">
+                За крутую лекцию. Узнала много нового!
+            </div>
+        </div>
+    </div>
+    <div id="notification2" class="notification">
+        <div><img src="assets/img/avatar.png" style="border-radius: 50%" alt="avatar" height="50px"></div>
+        <div class="notification_data">
+            <div style="font-size: 17px;"><b>Достигнуто: </b><span
+                    style="color: green; font-weight: bolder; font-size: 20px;">Выпустить проект в прод</span></div>
+            <div class="transaction_msg">
+                Награда: NFT "Chilling Capybara"
+            </div>
+        </div>
+    </div>
+    <div id="notification3" class="notification">
+        <div class="notification_data">
+            <div style="font-size: 17px;"><b>Получено достижение: </b><span
+                    style="color: green; font-weight: bolder; font-size: 20px;">Купил на 10к DR</span></div>
+        </div>
+    </div>
+</main>
+<footer></footer>
+<script type="text/javascript" src="../script.js"></script>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Выберите коллегу</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="user">
+                    <img src="assets/img/avatar.png">
+                    <span>Иванов Иван Иванович</span>
+                    <input placeholder="Введи сумму" type="number">
+                    <textarea placeholder="Напиши текст"></textarea>
+                    <button onclick="select(event)">Выбрать</button>
+                </div>
+                <div class="user">
+                    <img src="assets/img/avatar.png">
+                    <span>Иванова Алена Дмитриевна</span>
+                    <input placeholder="Введи сумму" type="number">
+                    <textarea placeholder="Напиши текст"></textarea>
+                    <button onclick="select(event)">Выбрать</button>
+                </div>
+                <div class="user">
+                    <img src="assets/img/avatar.png">
+                    <span>Иванова Ирина Николаевна</span>
+                    <input placeholder="Введи сумму" type="number">
+                    <textarea placeholder="Напиши текст"></textarea>
+                    <button onclick="select(event)">Выбрать</button>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="../script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+</body>
+<script>
+
+    document.addEventListener('keypress', e => {
+        console.log(e.keyCode)
+        if (e.keyCode === 122) {
+            document.getElementById("notification").style.opacity = 1;
+
+            setTimeout(() => {
+                document.getElementById("notification").style.opacity = 0;
+            }, 3000)
+        }
+    })
+
+
+    document.addEventListener('keypress', e => {
+        if (e.keyCode === 99) {
+            document.getElementById("notification3").style.opacity = 1;
+            document.getElementById("achievements").innerHTML += `
+            <div class="achievement">
+                            <img src="assets/img/medal%20(2).png">
+                            <p>Купил на 10к DR</p>
+                        </div>
+            `
+            setTimeout(() => {
+                document.getElementById("notification3").style.opacity = 0;
+            }, 3000)
+        }
+    })
+
+    const sendThanks = () => {
+        document.getElementById("notification4").style.opacity = 1;
+        setTimeout(() => {
+            document.getElementById("notification4").style.opacity = 0;
+        }, 3000)
+    }
+
+
+    document.addEventListener('keypress', e => {
+        if (e.keyCode === 120) {
+            document.getElementById("notification2").style.opacity = 1;
+            document.getElementById("goal").style.display = 'none';
+            document.getElementById("no-goal").style.display = "initial";
+            fetch(`http://localhost:3000/nft/assign/capybara.png/to/4`).then(res => res.json()).then(res => {
+                console.log('done');
+                loadUserData(userId);
+            })
+            setTimeout(() => {
+                document.getElementById("notification2").style.opacity = 0;
+            }, 3000)
+        }
+    })
+
+    const loadUserData = (userId) => {
+        console.log(userId)
+        if (userId == 4) {
+            document.getElementById("name").innerText = "Иванова Мария Ивановна";
+            document.getElementById("avatar").src = "assets/img/female.png";
+            document.getElementById("name2").innerText = "Иванова Мария Ивановна";
+            document.getElementById("avatar2").src = "assets/img/female.png"
+        } else {
+            document.getElementById("goal").style.display = 'none';
+            document.getElementById("no-goal").style.display = "initial";
+        }
+        fetch(`http://localhost:3000/user/${userId}`).then(res => res.json()).then(res => {
+            document.getElementById("lvl").innerText = `Уровень ${res.lvl}`;
+            document.getElementById("pointsToNext").innerText = `${50 * (res.lvl + 1) - res.pointsOnCurrentLevel} до уровня ${res.lvl + 1}`;
+            document.getElementById("bar").style.width = res.pointsOnCurrentLevel / (50 * (res.lvl + 1)) * 100 + "%";
+            const nfts = res.nfts;
+            document.getElementById("nfts").innerHTML = "";
+            nfts.forEach(nft => {
+                fetch(`http://localhost:3000/nft/${nft}`).then(res => res.json()).then(res => {
+                    document.getElementById("nfts").innerHTML += `
+                  <div class="nft">
+                            <div style="width: 240px; height: 190px;">
+                                <img src="assets/img/${res.uri}" style="width: 100%; border-radius: 50%">
+                            </div>
+                            <div class="nft_data">
+                                <div style="display: flex; justify-content: space-between">
+                                    <div class="nft-name">${res.name}</div>
+                                    <div class="nft-name" style="min-width: auto; color: green; font-weight: bolder">
+                                        ${res.cost} DR
+                                    </div>
+                                </div>
+                                <div>Такой NFT есть у <b style="color: #0b56dc">${res.rarity}% сотрудников</b></div>
+                                <button class="thanks-btn" onclick="sellNft()">Продать</button>
+                            </div>
+                        </div>`
+                })
+            })
+        })
+    }
+
+    const loadUserWallet = (userId) => {
+        fetch(`http://localhost:3000/user/${userId}/wallet`).then(res => res.json()).then(res => {
+            console.log(res);
+            const selled = localStorage.getItem("capybaraSelled");
+            let minus = 0;
+            if (userId == 3) {
+                minus = (!selled ? 1099000 : 1089100)
+            }
+            document.getElementById("balanceCoins").innerText = res.coinsAmount - minus;
+        })
+    }
+
+    const sellNft = () => {
+        fetch(`http://localhost:3000/nft/sell/capybara.png/from/3`).then(res => res.json()).then(res => {
+            console.log('done');
+            localStorage.setItem("capybaraSelled", 1);
+            document.getElementById("link").setAttribute("href", "marketplace.html");
+            document.getElementById("balanceCoins").innerHTML = +document.getElementById("balanceCoins").innerHTML;
+            loadUserData(userId);
+        })
+    }
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const userId = urlParams.get('userId') || '3';
+    loadUserData(userId);
+    loadUserWallet(userId);
+</script>
+</body>
+</html>
